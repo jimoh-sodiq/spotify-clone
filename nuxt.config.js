@@ -55,7 +55,7 @@ export default {
           authorization: 'https://accounts.spotify.com/authorize',
           token: undefined,
           userInfo: 'https://api.spotify.com/v1/me',
-          logout: 'http://localhost:3000/login',
+          logout: process.env.LOGOUT,
         },
         token: {
           property: 'access_token',
@@ -69,11 +69,11 @@ export default {
         responseType: 'token',
         grantType: 'authorization_code',
         accessType: undefined,
-        redirectUri: 'http://localhost:3000/callback',
-        logoutRedirectUri: 'http://localhost:3000/login',
-        clientId: $config.clientId,
+        redirectUri: process.env.REDIRECT_URI,
+        logoutRedirectUri: process.env.LOGOUT_REDIRECT_URI,
+        clientId: process.env.CLIENT_ID,
         scope: ['playlist-read-private', 'playlist-modify-private', 'user-read-private','user-read-email', 'playlist-read-collaborative','streaming','user-library-read'],
-        state: 'UNIQUE_AND_NON_GUESSABLE',
+        state: process.env.AUTH_STATE,
         codeChallengeMethod: '',
         responseMode: '',
         acrValues: '',
@@ -86,9 +86,9 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-  privateRuntimeConfig: {
-    clientId : process.env.CLIENT_ID,
-    clientSecret : process.env.CLIENT_SECRET
+  // privateRuntimeConfig: {
+  //   clientId : process.env.CLIENT_ID,
+  //   clientSecret : process.env.CLIENT_SECRET
 
-  }
+  // }
 }
