@@ -1,0 +1,25 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/auth-next": "5.0.0-1637745161.ea53f98",
+    "@nuxtjs/axios": "^5.13.6",
+    "core-js": "^3.15.1",
+    "lodash": "^4.17.21",
+    "nuxt": "^2.15.7",
+    "simple-swizzle": "^0.2.2",
+    "spotify-web-api-node": "^5.0.2",
+    "tailwind-scrollbar-hide": "^1.1.6"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^4.2.0",
+    "postcss": "^8.3.5"
+  }
+}
